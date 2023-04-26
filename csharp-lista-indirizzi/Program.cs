@@ -11,10 +11,17 @@ Attenzione: gli ultimi 3 indirizzi presentano dei possibili â€œcasi particolariâ
 vi chiedo di pensarci e di gestire come meglio crediate queste casistiche
  */
 
-//creare oggetto 'address'
 //creo una lista 'Addresses' di oggetti 'address'
+using csharp_lista_indirizzi;
 
+List<Address> Addresses = new List<Address>();
 //devo aprire il file .csv
+StreamReader fileToRead = new StreamReader(File.OpenRead("C:\\Users\\DELL LATITUDE 7280\\source\\repos\\csharp-lista-indirizzi\\csharp-lista-indirizzi\\data\\addresses.csv"));
+while (!fileToRead.EndOfStream)
+{
+  
+    Console.WriteLine(fileToRead.ReadLine());
+}
 //leggo ogni riga del file
 //salvo ogni riga in una variabile string
 //per ogni riga salvo in diverse variabili i valori separati dalla virgola
@@ -22,3 +29,5 @@ vi chiedo di pensarci e di gestire come meglio crediate queste casistiche
 //per ogni riga del file csv inizializzo un oggetto 'address'
 //inserisco gli oggetti address nella lista
 //stampo gli indirizzi della lista
+
+//implementare exceptions
