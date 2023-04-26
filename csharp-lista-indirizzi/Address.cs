@@ -34,5 +34,19 @@ namespace csharp_lista_indirizzi
         //SETTERS
 
         //METHODS
+
+        public override string ToString()
+        {
+            string info = "------------- Address -------------\n";
+            info += $"Name: {this.name}\n";
+            info += $"Surname: {this.surname}\n";
+            info += $"Street: {this.street}\n";
+            info += $"City: {this.city}\n";
+            info += $"Province: {this.province}\n";
+            info += $"ZIP Code: {this.zipCode}\n";
+            info += "-----------------------------------";
+            return info;
+
+        }
     }
 }

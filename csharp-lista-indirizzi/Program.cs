@@ -11,23 +11,43 @@ Attenzione: gli ultimi 3 indirizzi presentano dei possibili “casi particolari�
 vi chiedo di pensarci e di gestire come meglio crediate queste casistiche
  */
 
-//creo una lista 'Addresses' di oggetti 'address'
 using csharp_lista_indirizzi;
 
 List<Address> Addresses = new List<Address>();
-//devo aprire il file .csv
 StreamReader fileToRead = new StreamReader(File.OpenRead("C:\\Users\\DELL LATITUDE 7280\\source\\repos\\csharp-lista-indirizzi\\csharp-lista-indirizzi\\data\\addresses.csv"));
-while (!fileToRead.EndOfStream)
-{
-  
-    Console.WriteLine(fileToRead.ReadLine());
-}
-//leggo ogni riga del file
-//salvo ogni riga in una variabile string
-//per ogni riga salvo in diverse variabili i valori separati dalla virgola
-//questi valori sono gli attributi dell'oggetto 'address' che bisognerà inizializzare
-//per ogni riga del file csv inizializzo un oggetto 'address'
-//inserisco gli oggetti address nella lista
-//stampo gli indirizzi della lista
+int lineNumber = 1;
 
-//implementare exceptions
+try 
+{ 
+    while (!fileToRead.EndOfStream)
+    {    
+        string line = fileToRead.ReadLine();
+        lineNumber++;
+        if(lineNumber > 1) 
+        { 
+       
+        string[] addressObjectAttributes = line.Split(",");
+            try
+            {
+                Address newAddress = new Address(addressObjectAttributes[0], addressObjectAttributes[1], addressObjectAttributes[2], addressObjectAttributes[3], addressObjectAttributes[4], addressObjectAttributes[5]);
+
+                Addresses.Add(newAddress);
+                lineNumber++;
+            }catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+         
+    }
+        
+    foreach (Address address in Addresses)
+    {
+        Console.WriteLine(address);
+    }
+
+}catch(Exception e)
+{
+    Console.WriteLine($"{e.Message}"); 
+}
+
