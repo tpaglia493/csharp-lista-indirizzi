@@ -11,4 +11,13 @@ Attenzione: gli ultimi 3 indirizzi presentano dei possibili “casi particolari�
 vi chiedo di pensarci e di gestire come meglio crediate queste casistiche
  */
 
+//creare oggetto 'address'
 
+//devo aprire il file .csv
+//leggo ogni riga del file
+//salvo ogni riga in una variabile string
+//per ogni riga salvo in diverse variabili i valori separati dalla virgola
+//questi valori sono gli attributi dell'oggetto 'address' che bisognerà inizializzare
+//per ogni riga del file csv inizializzo un oggetto 'address'
+//creo una lista di oggetti 'address'
+//stampo gli indirizzi della lista
