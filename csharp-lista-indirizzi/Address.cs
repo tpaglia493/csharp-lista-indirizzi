@@ -14,11 +14,11 @@ namespace csharp_lista_indirizzi
         private string street;
         private string city;
         private string province;
-        private string zipCode; 
+        private int zipCode; 
         
         //CONSTRUCTOR
 
-        public Address(string name, string surname, string street, string city, string province, string zipCode) 
+        public Address(string name, string surname, string street, string city, string province, int zipCode) 
         {
             this.name = name;
             this.surname = surname;
