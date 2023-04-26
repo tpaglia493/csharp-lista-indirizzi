@@ -25,13 +25,26 @@ namespace csharp_lista_indirizzi
             this.street = street;
             this.city = city;
             this.province = province;
-            this.zipCode = zipCode;
+            SetZipCode(zipCode);
 
         }
 
         //GETTERS
 
         //SETTERS
+        public void SetZipCode(int zipCode)
+        {
+            if (zipCode is int)
+            {
+                this.zipCode = zipCode;
+                
+            }
+            else 
+            {
+                this.zipCode = 0;
+                throw new ArgumentException("should insert a number", "zipCode"); 
+            }
+        }
 
         //METHODS
 
