@@ -12,6 +12,7 @@ vi chiedo di pensarci e di gestire come meglio crediate queste casistiche
  */
 
 //creare oggetto 'address'
+//creo una lista 'Addresses' di oggetti 'address'
 
 //devo aprire il file .csv
 //leggo ogni riga del file
@@ -19,5 +20,5 @@ vi chiedo di pensarci e di gestire come meglio crediate queste casistiche
 //per ogni riga salvo in diverse variabili i valori separati dalla virgola
 //questi valori sono gli attributi dell'oggetto 'address' che bisognerà inizializzare
 //per ogni riga del file csv inizializzo un oggetto 'address'
-//creo una lista di oggetti 'address'
+//inserisco gli oggetti address nella lista
 //stampo gli indirizzi della lista
