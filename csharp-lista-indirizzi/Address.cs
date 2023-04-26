@@ -16,7 +16,7 @@ namespace csharp_lista_indirizzi
         private string province;
         private int zipCode; 
         
-        //CONSTRUCTOR
+        //CONSTRUCTORS
 
         public Address(string name, string surname, string street, string city, string province, int zipCode) 
         {
@@ -25,14 +25,24 @@ namespace csharp_lista_indirizzi
             this.street = street;
             this.city = city;
             this.province = province;
-            SetZipCode(zipCode);
+            this.zipCode = zipCode;
 
         }
+
+        public Address(string name, string surname, string street, string city, string province)
+        {
+            this.name = name;
+            this.surname = surname;
+            this.street = street;
+            this.city = city;
+            this.province = province;
+        }
+
 
         //GETTERS
 
         //SETTERS
-        public void SetZipCode(int zipCode)
+        /*public void SetZipCode(int zipCode)
         {
             if (zipCode is int)
             {
@@ -45,7 +55,7 @@ namespace csharp_lista_indirizzi
                 throw new ArgumentException("should insert a number", "zipCode"); 
             }
         }
-
+        */
         //METHODS
 
         public override string ToString()
