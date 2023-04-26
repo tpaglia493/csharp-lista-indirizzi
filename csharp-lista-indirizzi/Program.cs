@@ -22,7 +22,7 @@ try
     while (!fileToRead.EndOfStream)
     {    
         string line = fileToRead.ReadLine();
-        lineNumber++;
+
         if(lineNumber > 1) 
         { 
        
@@ -38,7 +38,7 @@ try
                 Console.WriteLine(ex.ToString());
             }
         }
-         
+        lineNumber++; 
     }
         
     foreach (Address address in Addresses)
